@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpDesk: Frontend</title>
+</head>
+<body>
+    <div class="modal modal-add-ticket no-active">
+        <h4 class="modal-title">Добавить тикет</h4>
+        <form class="form form-add">
+            <span class="modal-description">Краткое описание</span>
+            <textarea class="modal-basic-text" name="name"></textarea>
+            <span class="modal-description">Подробное описание</span>
+            <textarea class="modal-description-text" name="description"></textarea>
+            <div class="modal-button-container">
+                <button class="button modal-btn-cancel">Отмена</button>
+                <button class="button modal-btn-ok">Ок</button>
+            </div>
+        </form>
+    </div>
+    <div class="modal modal-replace-ticket no-active">
+        <h4 class="modal-title">Изменить тикет</h4>
+        <form class="form form-replace">
+            <span class="modal-description">Краткое описание</span>
+            <textarea class="modal-basic-text" name="name"></textarea>
+            <span class="modal-description">Подробное описание</span>
+            <textarea class="modal-description-text" name="description"></textarea>
+            <div class="modal-button-container">
+                <button class="button modal-btn-cancel">Отмена</button>
+                <button class="button modal-btn-ok">Ок</button>
+            </div>
+        </form>
+    </div>
+        <div class="modal modal-delete-ticket no-active">
+            <h4 class="modal-title">Удалить тикет</h4>
+            <span class="modal-description">Вы уверены, что хотите удалить тикет?</span>
+            <div class="modal-button-container">
+                <button class="button modal-btn-cancel">Отмена</button>
+                <button class="button modal-btn-ok">Ок</button>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="add-ticket-button-container">
+            <button class="button add-ticket-button">Добавить тикет</button>
+        </div>
+        <div class="tikets-list">
+        </div>
+    </main>
+</body>
+</html>

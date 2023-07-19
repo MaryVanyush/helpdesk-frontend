@@ -1,0 +1,238 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+input {
+    outline: none;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1,5;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+body{
+    background-color: rgb(103, 170, 247);
+    background: url('../images/background.jpg') 0 0/cover no-repeat fixed;
+    font-family: Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 18px;
+    color: rgb(63, 60, 60);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+
+.add-ticket-button-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+.button{
+    width: 200px;
+    height: 50px;
+    border: 1px solid rgba(0,0,0,.6);
+    border-radius: 8px;
+    background-color: rgb(244, 246, 248);
+    font-family: Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 18px;
+    color: rgb(63, 60, 60);
+}
+
+.tikets-list{
+    border-top: 1px solid rgba(0,0,0,.6);
+    border-left: 1px solid rgba(0,0,0,.6);
+    border-right: 1px solid rgba(0,0,0,.6);
+}
+
+.ticket{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0,0,0,.6);
+    background-color: rgb(244, 246, 248);
+    padding: 15px;
+}
+
+.ticket_basic-information{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.checkbox{
+    min-width:25px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,.6);
+    background-color: rgb(244, 246, 248);
+}
+
+.checked{
+    background-image: url(../images/free-icon-check-mark-1442912.png);
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+.date{
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.replace-ticket-button{
+    min-width:25px;
+    height: 25px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,.6);
+    background-color: rgb(244, 246, 248);
+    background-image: url(../images/free-icon-pencil-1046295.png);
+    background-size: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+
+.delete-ticket-button{
+    min-width:25px;
+    height: 25px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,.6);
+    background-color: rgb(244, 246, 248);
+    background-image: url(../images/free-icon-crossed-4219073.png);
+    background-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+
+.ticket_description{
+    margin-top: 15px;
+    margin-left: 40px;
+    max-width: 60%;
+}
+
+.basic-information-text{
+    flex-grow: 3;
+}
+
+.modal{
+    position: absolute;
+    background-color: rgb(244, 246, 248);
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    margin-left: -300px;
+    margin-top: -200px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,.6);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-title{
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-description{
+    margin-bottom: 10px;
+}
+
+.modal-basic-text{
+    margin-bottom: 30px;
+    resize: none;
+    height: 25px;
+    padding: 10px;
+    background-color: rgb(244, 246, 248);
+    font-family: Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 18px;
+    color: rgb(63, 60, 60);
+}
+
+.modal-basic-text:focus{
+    outline: none;
+}
+
+.modal-description-text{
+    margin-bottom: 30px;
+    resize: none;
+    height: 60px;
+    padding: 10px;
+    background-color: rgb(244, 246, 248);
+    font-family: Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 18px;
+    color: rgb(63, 60, 60);
+}
+.modal-description-text:focus{
+    outline: none;
+}
+
+.modal-button-container{
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
+.modal-btn-cancel{
+    width: 100px;
+}
+
+.modal-btn-ok{
+    margin-left: 10px;
+    width: 50px;
+}
+
+.modal-delete-ticket{
+    height: 200px;
+    width: 400px;
+    margin-left: -200px;
+    margin-top: -100px;
+}
+
+.no-active{
+    display: none;
+}
